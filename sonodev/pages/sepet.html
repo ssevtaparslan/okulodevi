@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sepet - Lunaria</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+
+  <!-- sepetim-->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Lunaria</h1>
+      <ul class="nav-links">
+        <li><a href="../index.html">Anasayfa</a></li>
+        <li><a href="yuzbakim.html">Yüz Bakım</a></li>
+        <li><a href="vucütbakim.html">Vücut Bakım</a></li>
+        <li><a href="makyaj.html">Makyaj</a></li>
+        <li><a href="minipaketler.html">Mini Paketler</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="urunsec.html">Ürün Seç</a></li>
+        <li><a href="sepet.html">Sepet</a></li>
+        <li><a href="yorumlar.html">Yorumlar</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section class="sepet-container">
+   
+    <div class="sepet-sol">
+      <h2>Sepetiniz</h2>
+      <table id="sepet-tablosu">
+        <thead>
+          <tr>
+            <th>Ürün</th>
+            <th>Fiyat</th>
+            <th>Sil</th>
+          </tr>
+        </thead>
+        <tbody id="sepet-tbody">
+          <!-- Ürünler JS ile gelecek -->
+        </tbody>
+      </table>
+    </div>
+
+   
+    <div class="sepet-sag">
+      <h3>Ödeme Özeti</h3>
+      <p><strong>Toplam:</strong> <span id="toplam-fiyat">0</span> ₺</p>
+
+      <input type="text" placeholder="Kart Numarası" required />
+      <input type="text" placeholder="Son Kullanma (AA/YY)" required />
+      <input type="text" placeholder="CVC" required />
+
+      <button class="odeme-btn" onclick="odemeYap()">Alışverişi Tamamla</button>
+      <p id="odeme-mesaj" style="margin-top: 15px; color: green;"></p>
+    </div>
+  </section>
+
+  <script>
+    let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
+    const tbody = document.getElementById("sepet-tbody");
+    const toplamFiyatEl = document.getElementById("toplam-fiyat");
+
+    function tabloyuGuncelle() {
+      tbody.innerHTML = "";
+      let toplam = 0;
+
+      sepet.forEach((urun, index) => {
+        toplam += Number(urun.fiyat);
+        tbody.innerHTML += `
+          <tr>
+            <td>${urun.ad}</td>
+            <td>${urun.fiyat} ₺</td>
+            <td><button onclick="sil(${index})">🗑️</button></td>
+          </tr>
+        `;
+      });
+
+      toplamFiyatEl.textContent = toplam;
+      localStorage.setItem("sepet", JSON.stringify(sepet));
+    }
+
+    function sil(index) {
+      sepet.splice(index, 1);
+      tabloyuGuncelle();
+    }
+
+    function odemeYap() {
+      if (sepet.length === 0) {
+        alert("Sepetiniz boş.");
+        return;
+      }
+
+      document.getElementById("odeme-mesaj").textContent = "✅ Ödeme başarıyla alındı!";
+      sepet = [];
+      localStorage.removeItem("sepet");
+      tabloyuGuncelle();
+    }
+
+    tabloyuGuncelle();
+  </script>
+
+</body>
+</html>

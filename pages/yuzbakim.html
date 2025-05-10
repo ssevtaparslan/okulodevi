@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yüz Bakım Ürünleri - Lunaria</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+  <!-- yuzbakim -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Lunaria</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="yuzbakim.html">Yüz Bakım</a></li>
+        <li><a href="vucütbakim.html">Vücut Bakım</a></li>
+        <li><a href="makyaj.html">Makyaj</a></li>
+        <li><a href="minipaketler.html">Mini Paketler</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="urunsec.html">Ürün Seç</a></li>
+        <li><a href="sepet.html">Sepet</a></li>
+        <li><a href="yorumlar.html">Yorumlar</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ürünlerim -->
+  <section class="urunler">
+    <h2>Yüz Bakım Ürünleri</h2>
+    <div class="urun-grid">
+      <div class="urun-kart">
+        <img src="../gorsel/jel1.jpg" alt="Yüz Temizleyici">
+        <h4>Arındırıcı Yüz Temizleyici</h4>
+        <p>Hassas ciltler için sabunsuz jel.</p>
+        <span>₺149</span>
+        <button onclick="sepeteEkle('Arındırıcı Yüz Temizleyici', 149)">Sepete Ekle</button>
+      </div>
+
+      <div class="urun-kart">
+        <img src="../gorsel/jel2.jpg" alt="Cilt Canlandırıcı">
+        <h4>Cilt Canlandırıcı</h4>
+        <p>Işıltılı bir cilt için yoğun bakım.</p>
+        <span>₺229</span>
+        <button onclick="sepeteEkle('Cilt Canlandırıcı', 229)">Sepete Ekle</button>
+      </div>
+
+      <div class="urun-kart">
+        <img src="../gorsel/jel3.png" alt="Yağlı ve Karma Ciltler için Yıkama Jeli">
+        <h4>Gül Suyu Tonikli</h4>
+        <p>Yağlı ve Karma Ciltler için Yıkama Jeli</p>
+        <span>₺119</span>
+        <button onclick="sepeteEkle('Gül Suyu Tonikli', 119)">Sepete Ekle</button>
+      </div>
+
+      <div class="urun-kart">
+        <img src="../gorsel/jel4.png" alt="Kuru Ciltler için Yıkama Jeli">
+        <h4>Kuru Ciltler için Yıkama Jeli</h4>
+        <p>Yoğun nem sağlayan hafif yapılı jel.</p>
+        <span>₺179</span>
+        <button onclick="sepeteEkle('Kuru Ciltler için Yıkama Jeli', 179)">Sepete Ekle</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- js!-->
+  <script src="../scripts/myscript.js"></script>
+
+</body>
+</html>

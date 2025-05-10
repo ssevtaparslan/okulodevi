@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vücut Bakım Ürünleri - Lunaria</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Lunaria</h1>
+      <ul class="nav-links">
+        <li><a href="../index.html">Anasayfa</a></li>
+        <li><a href="yuzbakim.html">Yüz Bakım</a></li>
+        <li><a href="vucütbakim.html">Vücut Bakım</a></li>
+        <li><a href="makyaj.html">Makyaj</a></li>
+        <li><a href="minipaketler.html">Mini Paketler</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="urunsec.html">Ürün Seç</a></li>
+        <li><a href="sepet.html">Sepet</a></li>
+        <li><a href="yorumlar.html">Yorumlar</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ürünlerim -->
+  <section class="urunler">
+    <h2>Vücut Bakım Ürünleri</h2>
+    <div class="urun-grid">
+
+      <div class="urun-kart">
+        <img src="../gorsel/vücut1.jpg" alt="Cocoa Butter Losyon">
+        <h4>Cocoa Butter Losyon</h4>
+        <p>Besleyici kakao yağı içeriğiyle yumuşacık bir cilt.</p>
+        <span>₺159</span>
+        <button onclick="sepeteEkle('Cocoa Butter Losyon', 159)">Sepete Ekle</button>
+      </div>
+
+      <div class="urun-kart">
+        <img src="../gorsel/vücut2.jpg" alt="Shea Butter Losyon">
+        <h4>Shea Butter Losyon</h4>
+        <p>Shea yağı ile derinlemesine nemlendirme.</p>
+        <span>₺179</span>
+        <button onclick="sepeteEkle('Shea Butter Losyon', 179)">Sepete Ekle</button>
+      </div>
+
+      <div class="urun-kart">
+        <img src="../gorsel/krem3.png" alt="Chamomile Body Lotion">
+        <h4>Papatya Özlü Vücut Losyonu</h4>
+        <p>Hassas ciltler için yatıştırıcı bakım.</p>
+        <span>₺149</span>
+        <button onclick="sepeteEkle('Papatya Özlü Losyon', 149)">Sepete Ekle</button>
+      </div>
+
+      <div class="urun-kart">
+        <img src="../gorsel/krem4.png" alt="Lavender Body Lotion">
+        <h4>Lavanta Özlü Vücut Losyonu</h4>
+        <p>Rahatlatıcı lavanta aromasıyla gece bakımı.</p>
+        <span>₺149</span>
+        <button onclick="sepeteEkle('Lavanta Özlü Losyon', 149)">Sepete Ekle</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script src="../scripts/myscript.js"></script>
+</body>
+</html>
